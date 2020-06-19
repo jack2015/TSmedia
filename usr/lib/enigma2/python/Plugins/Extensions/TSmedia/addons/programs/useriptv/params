@@ -1,0 +1,12 @@
+plugin_title==User streams
+plugin_id==useriptv
+section==programs
+subsection==general
+version==1.0.1
+provider==mFaraj
+textsize==20
+textcolor==#00ffe875
+metadata==False
+fanart==True
+thumbnail==True
+downloadimage==True

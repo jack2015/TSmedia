@@ -1,0 +1,18 @@
+##params##
+plugin_title==E2youtube
+plugin_id==E2youtube
+section==youtube
+subsection==general
+group==movies
+rating==4
+version==1.0.0
+provider==TSmedia Team
+textsize==20
+textcolor==#FFFAFA
+infobar_color==#000080
+infobar_forecolor==#FFFFFF
+mediatype==youtube
+style==thumbnails
+downloadimage_by==thread
+fanart==True
+autonext==True

@@ -1,0 +1,12 @@
+plugin_title==youtube
+plugin_id==youtube
+section==youtube
+subsection==general
+group==netmedia
+rating==5
+version==1.0.0
+provider==TSmedia Team
+metadata==True
+textcolor==#00ffe875
+metadata==True
+downloadimage_by==twisted

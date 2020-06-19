@@ -1,0 +1,5 @@
+iptv;stream test;http://tunisia-dreambox.info/download/test.mp4
+m3u;danish;http://tunisia-dreambox.info/TSmedia/m3u/danish.m3u
+m3u;palnet1;http://tunisia-dreambox.info/TSmedia/m3u/planeta2.m3u
+m3u;worlIPTV;http://tunisia-dreambox.info/TSmedia/m3u/planeta.m3u
+m3u;slingiptv;http://slingiptv.ddns.net:9999/get.php?username=3iXshVw4LM&password=ci6sxgw837&type=m3u 

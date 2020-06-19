@@ -1,0 +1,13 @@
+plugin_title==VLCtester
+plugin_id==vlctester
+section==programs
+subsection==general
+version==1.0.3
+provider==BY TSMEDIA TEAM
+textsize==20
+textcolor==#00ffe875
+metadata==False
+fanart==True
+thumbnail==True
+downloadimage==True
+autonext==True

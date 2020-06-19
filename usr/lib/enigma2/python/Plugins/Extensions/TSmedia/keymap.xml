@@ -1,0 +1,77 @@
+<keymap>
+	<map context="SubtitlesActions">
+		<key id="KEY_SUBTITLE" mapto="subtitles" flags="m" />
+		<key id="KEY_TEXT" mapto="subtitles" flags="m" />
+		<key id="KEY_RADIO" mapto="subtitles" flags="m" />
+		<key id="KEY_TV" mapto="subtitlesStatus" flags="m" />
+	</map>
+	<map context="InfoActions">
+		<key id="KEY_INFO" mapto="info" flags="m" />
+		<key id="KEY_TEXT" mapto="text" flags="m" />
+	</map>
+        <map context="vkeyboardActions">
+           <key id="KEY_MUTE" mapto="cleartext" flags="m"/>
+           <key id="KEY_STOP" mapto="insertspace" flags="m"/>
+           <key id="KEY_REWIND" mapto="goleft" flags="m"/>
+           <key id="KEY_FASTFORWARD" mapto="goright" flags="m"/>
+           <key id="KEY_PREVIOUSSONG" mapto="goend" flags="m" />
+           <key id="KEY_NEXTSONG" mapto="gohome" flags="m" />
+
+			
+           
+           
+           
+        </map>
+	<map context="SubtitlesDVBActions">
+		<key id="KEY_LEFT" mapto="prevSub" flags="m" />
+		<key id="KEY_TEXT" mapto="showdesc" flags="m" />
+		<key id="KEY_RIGHT" mapto="nextSub" flags="m" />
+		<key id="KEY_UP" mapto="restartSub" flags="m" />
+		<key id="KEY_DOWN" mapto="restartSub" flags="m" />
+		<key id="KEY_PREVIOUS" mapto="prevSubMinute" flags="b" />
+		<key id="KEY_PREVIOUS" mapto="prevSubManual" flags="l" />
+		<key id="KEY_REWIND" mapto="prevSubMinute" flags="b"/>
+		<key id="KEY_REWIND" mapto="prevSubManual" flags="l" />
+		<key id="KEY_FASTFORWARD" mapto="nextSubMinute" flags="b"/>
+		<key id="KEY_NEXT" mapto="nextSubMinute" flags="b" />
+		<key id="KEY_NEXT" mapto="nextSubManual" flags="l" />
+		<key id="KEY_PAUSE" mapto="pauseSub" flags="m" />
+		<key id="KEY_PLAY" mapto="resumeSub" flags="m"/>
+		<key id="KEY_PLAYPAUSE" mapto="playPauseSub" flags="m"/>
+		<!-- <key id="KEY_RED" mapto="prevSubMinute" flags="m"/> 
+		<key id="KEY_GREEN" mapto="nextSubMinute" flags="m"/> -->
+		<key id="KEY_YELLOW" mapto="eventSync" flags="m" />		
+		<key id="KEY_OK" mapto="showHideStatus" flags="m"/>
+		<key id="KEY_EXIT" mapto="closePlugin" flags="m"/>
+		<key id="KEY_ESC" mapto="closePlugin" flags="m"/>
+	</map>
+    <map context="exPlayerActions">
+        <key id="KEY_LEFT"     mapto="left_press"   flags="m" />
+        <key id="KEY_LEFT"     mapto="left_repeat"  flags="r" />
+        <key id="KEY_RIGHT"    mapto="rigth_press"  flags="m" />
+        <key id="KEY_RIGHT"    mapto="rigth_repeat" flags="r" />
+        <key id="KEY_UP"       mapto="up_press"     flags="m" />
+        <key id="KEY_UP"       mapto="up_repeat"    flags="r" />
+        <key id="KEY_DOWN"     mapto="down_press"   flags="m" />
+        <key id="KEY_DOWN"     mapto="down_repeat"  flags="r" />
+        <key id="KEY_EXIT"     mapto="exit"         flags="m" />
+        <key id="KEY_ESC"      mapto="exit"         flags="m" />
+        <key id="KEY_INFO"     mapto="info"         flags="m" />
+        <key id="KEY_HELP"     mapto="info"         flags="m" />
+        
+        <key id="KEY_TEXT"     mapto="subssupport"    flags="m" />
+
+        <key id="KEY_SUBTITLE" mapto="subtitles"    flags="m" />
+        <key id="KEY_GREEN"    mapto="videooptions" flags="m" />
+        <key id="KEY_YELLOW"   mapto="audio"        flags="m" />
+        <key id="KEY_AUDIO"    mapto="audio"        flags="m" />
+        <key id="KEY_BLUE"      mapto="sync"        flags="m" />
+        <key id="KEY_MENU"     mapto="menu"         flags="m" />
+        <key id="KEY_8"        mapto="loop"         flags="m" />
+        <key id="KEY_RECORD"   mapto="record"       flags="m" />
+    </map>
+
+
+
+
+</keymap>

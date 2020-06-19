@@ -1,0 +1,4625 @@
+<skin>
+    <!--117 Movieplayer infobar -->
+<screen
+    name = "torrentPlayScreen"
+    position = "center,center"
+    backgroundColor = "#080000"
+    size = "1200,1000">
+
+   <widget name="playtorrent" position="750,330" size="140,140" pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/palytorrent.png" transparent="1" zPosition="3"  backgroundColor="#000000" alphatest = "blend"/>
+
+
+
+
+    <widget
+        name = "menu"
+        position = "15,5"
+        size = "1200,750"
+        scrollbarMode = "showOnDemand"
+        backgroundColor = "#0D2F48"
+        transparent = "0"
+        zPosition = "2"
+        selectionPixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/torrentselfhd.png"
+        scrollbarSliderForegroundColor = "#00ffffff"
+        scrollbarSliderBorderColor = "#10273b44"
+        scrollbarSliderPicture = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/bar_01.png"/>
+
+        <eLabel
+            text = "Remove"
+            position = "15,615"
+            size = "225,54"
+            font = "TSmediaFont;32"
+            foregroundColor = "#000000"
+            zPosition = "10"
+            valign = "center"
+            halign = "center"               
+            backgroundColor = "red"/>
+        <eLabel
+            text = "IMDB"
+            position = "240,615"
+            size = "225,54"
+            font = "TSmediaFont;32"
+            foregroundColor = "#000000"
+            zPosition = "10"
+            valign = "center"
+            halign = "center"               
+            backgroundColor = "green"/>
+
+
+
+
+            
+        <eLabel
+            text = "Files"
+            position = "465,615"
+            size = "225,54"
+            font = "TSmediaFont;32"
+            foregroundColor = "#000000"
+            zPosition = "10"
+            valign = "center"
+            halign = "center"            
+            backgroundColor = "#F4CE23"/>
+        <eLabel
+            text = "ShowHide"
+            position = "690,615"
+            size = "225,54"
+            font = "TSmediaFont;32"
+            foregroundColor = "#000000"
+            zPosition = "10"
+            valign = "center"
+            halign = "center"            
+            backgroundColor = "#259cc4"/>
+
+
+    <widget
+        name = "info"
+        position = "140,900"
+        size = "920,100"
+        backgroundColor = "#000000"
+        transparent = "3"
+        foregroundColor = "#ffffff"
+        font = "TSmediaFont;30"
+        valign = "top"
+        halign = "center"
+        zPosition = "10"/>
+
+    <widget
+        name = "handlung"
+        position = "140,780"
+        size = "920,100"
+        backgroundColor = "#000000"
+        transparent = "3"
+        foregroundColor = "#ffffff"
+        font = "TSmediaFont;30"
+        valign = "top"
+        halign = "center"
+        zPosition = "10"/>
+</screen>
+       <screen name='torrentPlaySkin' position="center,center"  backgroundColor="#000000"  size="800,500" >
+                <widget name="menu" itemHeight="400"  position="10,40" size="800,500" scrollbarMode="showOnDemand" backgroundColor="#10273b44"  transparent="0" zPosition="2" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/selection.png"  scrollbarSliderForegroundColor="#00ffffff" scrollbarSliderBorderColor="#10273b44" scrollbarSliderPicture="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/bar_01.png"/>
+               <widget name="handlung" position="0,420" size="800,40"  backgroundColor="#000000" transparent="0" foregroundColor="#ffffff" font="TSmediaFont;22" valign="top" halign="center" zPosition="10" />
+               <widget name="info" position="0,460" size="800,40" backgroundColor="#000000" transparent="0" foregroundColor="#ffffff" font="TSmediaFont;24" valign="top" halign="center" zPosition="10" />
+        </screen>
+    <screen
+        name = "TSmediaVirtualKeyBoard"
+        position = "center,center"
+        size = "1800,840"
+        zPosition = "99"
+        title = "Virtual keyboard">
+        <widget
+            source = "country"
+            render = "Pixmap"
+            position = "460,600"
+            size = "60,60"
+            alphatest = "on"
+            borderWidth = "2"
+            borderColor = "yellow">
+            <convert type = "ValueToPixmap">LanguageCode</convert>
+        </widget>
+        <widget
+            name = "header"
+            position = "10,10"
+            size = "500,20"
+            font = "Regular;30"
+            transparent = "1"
+            noWrap = "1"/>
+        <widget
+            name = "text"
+            position = "460,250"
+            size = "536,46"
+            font = "Regular;42"
+            transparent = "1"
+            noWrap = "1"
+            halign = "right"/>
+        <widget
+            name = "list"
+            position = "460,300"
+            size = "1020,240"
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <eLabel
+            text = "Press blue for suggestion"
+            position = "1400,10"
+            size = "520,35"
+            font = "Regular;31"
+            foregroundColor = "blue"
+            backgroundColor = "white"/>
+        <widget
+            name = "suggestlist"
+            position = "1400,50"
+            size = "520,480"
+            itemHeight = "30"
+            font = "Regular;30"
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <eLabel
+            text = "Press red for history"
+            position = "40,10"
+            size = "300,35"
+            font = "Regular;31"
+            foregroundColor = "red"
+            backgroundColor = "white"/>
+        <ePixmap
+            position = "400,20"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "historylist"
+            position = "30,50"
+            size = "300,480"
+            selectionDisabled = "1"
+            itemHeight = "30"
+            font = "Regular;30"
+            transparent = "1"/>
+    </screen>
+    <screen
+        name = "TSmediaVirtualKeyBoardDos_fhd"
+        position = "center,center"
+        size = "1800,940"
+        zPosition = "99"
+        title = "Virtual keyboard">
+        <widget
+            source = "country"
+            render = "Pixmap"
+            position = "350,550"
+            size = "60,60"
+            alphatest = "on"
+            borderWidth = "2"
+            borderColor = "yellow">
+            <convert type = "ValueToPixmap">LanguageCode</convert>
+        </widget>
+        <widget
+            name = "header"
+            position = "10,10"
+            size = "500,20"
+            font = "Regular;30"
+            transparent = "1"
+            noWrap = "1"/>
+        <widget
+            name = "text"
+            position = "350,600"
+            size = "536,46"
+            font = "Regular;42"
+            transparent = "1"
+            noWrap = "1"
+            halign = "right"/>
+        <widget
+            name = "list"
+            position = "350,660"
+            size = "1020,240"
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <eLabel
+            text = "Press blue for suggestion"
+            position = "1200,10"
+            size = "650,35"
+            font = "Regular;31"
+            foregroundColor = "blue"
+            backgroundColor = "white"/>
+        <widget
+            name = "suggestlist"
+            position = "1200,50"
+            size = "600,480"
+            
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <eLabel
+            text = "Press red for history"
+            position = "30,10"
+            size = "500,35"
+            font = "Regular;31"
+            foregroundColor = "red"
+            backgroundColor = "white"/>
+        <ePixmap
+            position = "600,20"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "historylist"
+            position = "30,50"
+            size = "500,480"
+            selectionDisabled = "1"            
+            transparent = "1"/>
+    </screen>
+    <screen
+        name = "TSmediaVirtualKeyBoardDos_fhd2"
+        position = "center,center"
+        size = "1500,840"
+        zPosition = "99"
+        title = "Virtual keyboard">
+        <widget
+            source = "country"
+            render = "Pixmap"
+            position = "60,600"
+            size = "90,60"
+            alphatest = "on"
+            borderWidth = "2"
+            borderColor = "yellow">
+            <convert type = "ValueToPixmap">LanguageCode</convert>
+        </widget>
+        <ePixmap
+            position = "100,270"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            text = "language"
+            position = "40,350"
+            size = "100,35"
+            font = "Regular;31"
+            foregroundColor = "white"
+            backgroundColor = "yellow"/>
+        <widget
+            name = "header"
+            position = "10,10"
+            size = "500,20"
+            font = "Regular;30"
+            transparent = "1"
+            noWrap = "1"/>
+        <widget
+            name = "text"
+            position = "302,250"
+            size = "536,46"
+            font = "Regular;42"
+            transparent = "1"
+            noWrap = "1"
+            halign = "right"/>
+        <widget
+            name = "list"
+            position = "300,300"
+            size = "1020,240"
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <eLabel
+            text = "Press blue for suggestion"
+            position = "1050,10"
+            size = "350,35"
+            font = "Regular;31"
+            foregroundColor = "blue"
+            backgroundColor = "white"/>
+        <widget
+            name = "suggestlist"
+            position = "1050,50"
+            size = "350,210"
+
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <eLabel
+            text = "Press red for history"
+            position = "50,10"
+            size = "300,35"
+            font = "Regular;31"
+            foregroundColor = "red"
+            backgroundColor = "white"/>
+        <widget
+            name = "historylist"
+            position = "50,50"
+            size = "200,2100"
+            selectionDisabled = "1"
+            transparent = "1"/>
+    </screen>
+    <screen
+        name = "TSMplayer"
+        position = "0,860"
+        size = "1920,220"
+        title = "InfoBar"
+        backgroundColor = "#54111112"
+        transparent = "0"
+        flags = "wfNoBorder">
+        <widget
+            position = "1800,170"
+            halign = "center"
+            size = "96,42"
+            foregroundColor = "#ffffff"
+            zPosition = "2"
+            name = "channel_number"
+            transparent = "0"
+            font = "TSmediaFont;48"/>
+        <widget
+            position = "360,185"
+            size = "1200,75"
+            zPosition = "2"
+            font = "Regular;30"
+            halign = "center"
+            noWrap = "1"
+            foregroundColor = "white"
+            transparent = "1"
+            backgroundColor = "background"
+            name = "programm"/>
+        <widget
+            name = "plugin_icon"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/iptv.png"
+            position = "1665,132"
+            size = "65,65"
+            transparent = "1"
+            alphatest = "blend"
+            borderWidth = "2"
+            borderColor = "#00555556"/>
+        <widget
+            name = "player"
+            font = "Regular;30"
+            position = "1400,175"
+            size = "300,80"            
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1"/>
+        <eLabel
+            text = "Subssupport"
+            font = "Regular;30"
+            position = "105,185"
+            size = "210,75"
+            halign = "center"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1"/>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/red.png"
+            position = "45,185"
+            size = "45,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "global.CurrentTime"
+            render = "Label"
+            position = "1539,29"
+            size = "210,51"
+            zPosition = "2"
+            font = "LCD;48"
+            valign = "top"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ClockToText">Default</convert>
+        </widget>
+        <widget
+            source = "global.CurrentTime"
+            render = "Label"
+            position = "1684,32"
+            size = "105,33"
+            zPosition = "2"
+            font = "LCD;30"
+            valign = "top"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ClockToText">Format::%S</convert>
+        </widget>
+        <widget
+            source = "global.CurrentTime"
+            render = "Label"
+            position = "150,32"
+            size = "165,36"
+            font = "Regular;33"
+            halign = "left"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ClockToText">Format:%d.%m.%Y</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "360,27"
+            size = "1200,45"
+            zPosition = "2"
+            font = "Regular;39"
+            halign = "center"
+            noWrap = "1"
+            foregroundColor = "white"
+            transparent = "1"
+            backgroundColor = "background">
+            <convert type = "ServiceName">Name</convert>
+        </widget>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_dolby_off.png"
+            position = "112,140"
+            size = "66,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "session.CurrentService"
+            render = "Pixmap"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_dolby_on.png"
+            position = "112,140"
+            size = "66,39"
+            zPosition = "2"
+            alphatest = "blend">
+            <convert type = "ServiceInfo">IsMultichannel</convert>
+            <convert type = "ConditionalShowHide"/>
+        </widget>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_format_off.png"
+            position = "184,140"
+            size = "66,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "session.CurrentService"
+            render = "Pixmap"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_format_on.png"
+            position = "184,140"
+            size = "66,39"
+            zPosition = "2"
+            alphatest = "blend">
+            <convert type = "ServiceInfo">IsWidescreen</convert>
+            <convert type = "ConditionalShowHide"/>
+        </widget>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_rec_off.png"
+            position = "256,140"
+            size = "66,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "session.RecordState"
+            render = "Pixmap"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_rec_on.png"
+            position = "256,140"
+            size = "66,39"
+            zPosition = "2"
+            alphatest = "blend">
+            <convert type = "ConditionalShowHide">Blink</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            font = "Regular;30"
+            position = "1624,86"
+            size = "82,36"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServiceInfo">VideoWidth</convert>
+        </widget>
+        <eLabel
+            text = "x"
+            font = "Regular;30"
+            position = "1707,86"
+            size = "22,36"
+            halign = "center"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1"/>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            font = "Regular;30"
+            position = "1729, 86"
+            size = "82,36"
+            halign = "left"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServiceInfo">VideoHeight</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "366, 86"
+            size = "150,39"
+            font = "Regular;33"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServicePosition">Position</convert>
+        </widget>
+        <ePixmap
+            position = "540, 93"
+            size = "900,33"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/mpsliderfhd.png"
+            zPosition = "3"
+            alphatest = "blend"/>
+        <widget
+            source = "session.CurrentService"
+            render = "PositionGauge"
+            position = "577, 99"
+            size = "828,21"
+            zPosition = "2"
+            pointer = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/pointer.png:13,3">
+            <convert type = "ServicePosition">Gauge</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "1470, 86"
+            size = "150,39"
+            font = "Regular;33"
+            halign = "left"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServicePosition">Remaining</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "900,140"
+            size = "180,37"
+            font = "Regular;36"
+            halign = "center"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServicePosition">Length</convert>
+        </widget>
+        <ePixmap
+            position = "93,86"
+            zPosition = "1"
+            size = "252,51"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/mp_buttons.png"
+            alphatest = "on"
+            transparent = "1"/>
+    </screen>
+    <!--TSRplayer -->
+    <screen
+        name = "TSRplayer"
+        position = "0,0"
+        size = "1920,1080"
+        backgroundColor = "#000000"
+        flags = "wfNoBorder"
+        title = "Player">
+        <widget
+            position = "1740,835"
+            halign = "center"
+            size = "96,42"
+            foregroundColor = "#ffffff"
+            zPosition = "2"
+            name = "channel_number"
+            transparent = "1"
+            font = "TSmediaFont;48"/>
+        <widget
+            name = "cover"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/radio.jpg"
+            position = "0,0"
+            size = "1920,720"
+            transparent = "1"
+            alphatest = "blend"
+            borderWidth = "2"
+            borderColor = "#00555556"/>
+        <widget
+            name = "plugin_icon"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/spicons/radio.png"
+            position = "1740,960"
+            size = "65,65"
+            transparent = "1"
+            alphatest = "blend"
+            borderWidth = "2"
+            borderColor = "#00555556"/>
+
+        <ePixmap
+            position = "60,960"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+
+            
+        <widget
+            position = "450,834"
+            size = "1005,195"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            zPosition = "2"
+            transparent = "1"
+            name = "programm"
+            halign = "center"
+            valign = "center"
+            font = "TSmediaFont;36"/>
+        <widget
+            source = "global.CurrentTime"
+            render = "Label"
+            position = "1539,759"
+            size = "210,51"
+            zPosition = "2"
+            font = "LCD;48"
+            valign = "top"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ClockToText">Default</convert>
+        </widget>
+        <widget
+            source = "global.CurrentTime"
+            render = "Label"
+            position = "1684,762"
+            size = "105,33"
+            zPosition = "2"
+            font = "LCD;30"
+            valign = "top"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ClockToText">Format::%S</convert>
+        </widget>
+        <widget
+            source = "global.CurrentTime"
+            render = "Label"
+            position = "150,762"
+            size = "165,36"
+            font = "TSmediaFont;33"
+            halign = "left"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ClockToText">Format:%d.%m.%Y</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "360,727"
+            size = "1200,45"
+            zPosition = "2"
+            font = "TSmediaFont;39"
+            halign = "center"
+            noWrap = "1"
+            foregroundColor = "white"
+            transparent = "1"
+            backgroundColor = "background">
+            <convert type = "ServiceName">Name</convert>
+        </widget>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_dolby_off.png"
+            position = "112,840"
+            size = "66,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "session.CurrentService"
+            render = "Pixmap"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_dolby_on.png"
+            position = "112,840"
+            size = "66,39"
+            zPosition = "2"
+            alphatest = "blend">
+            <convert type = "ServiceInfo">IsMultichannel</convert>
+            <convert type = "ConditionalShowHide"/>
+        </widget>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_format_off.png"
+            position = "184,840"
+            size = "66,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "session.CurrentService"
+            render = "Pixmap"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_format_on.png"
+            position = "184,840"
+            size = "66,39"
+            zPosition = "2"
+            alphatest = "blend">
+            <convert type = "ServiceInfo">IsWidescreen</convert>
+            <convert type = "ConditionalShowHide"/>
+        </widget>
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_rec_off.png"
+            position = "256,840"
+            size = "66,39"
+            zPosition = "1"
+            alphatest = "blend"/>
+        <widget
+            source = "session.RecordState"
+            render = "Pixmap"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/ico_rec_on.png"
+            position = "256,840"
+            size = "66,39"
+            zPosition = "2"
+            alphatest = "blend">
+            <convert type = "ConditionalShowHide">Blink</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            font = "TSmediaFont;30"
+            position = "1624,802"
+            size = "82,36"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServiceInfo">VideoWidth</convert>
+        </widget>
+        <eLabel
+            text = "x"
+            font = "TSmediaFont;30"
+            position = "1707,786"
+            size = "22,36"
+            halign = "center"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1"/>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            font = "TSmediaFont;30"
+            position = "1729,802"
+            size = "82,36"
+            halign = "left"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServiceInfo">VideoHeight</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "366,786"
+            size = "150,39"
+            font = "TSmediaFont;33"
+            halign = "right"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServicePosition">Position</convert>
+        </widget>
+        <ePixmap
+            position = "540,793"
+            size = "900,33"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/mpsliderfhd.png"
+            zPosition = "3"
+            alphatest = "blend"/>
+        <widget
+            source = "session.CurrentService"
+            render = "PositionGauge"
+            position = "577,799"
+            size = "828,21"
+            zPosition = "2"
+            pointer = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/pointer.png:13,3">
+            <convert type = "ServicePosition">Gauge</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "1470,786"
+            size = "150,39"
+            font = "TSmediaFont;33"
+            halign = "left"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServicePosition">Remaining</convert>
+        </widget>
+        <widget
+            source = "session.CurrentService"
+            render = "Label"
+            position = "900,840"
+            size = "180,37"
+            font = "TSmediaFont;36"
+            halign = "center"
+            foregroundColor = "white"
+            backgroundColor = "transpBlack"
+            transparent = "1">
+            <convert type = "ServicePosition">Length</convert>
+        </widget>
+        <ePixmap
+            position = "93,786"
+            zPosition = "1"
+            size = "252,51"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/mp_buttons.png"
+            alphatest = "on"
+            transparent = "1"/>
+    </screen>
+ <screen
+    name = "TSPplayer"
+    position = "0,0"
+    size = "1920,1080"
+    backgroundColor = "#000000"
+    flags = "wfNoBorder"
+    title = "Player">
+    <widget
+        position = "1795,1030"
+        halign = "center"
+        size = "96,62"
+        foregroundColor = "#ffffff"
+        zPosition = "2"
+        name = "channel_number"
+        transparent = "0"
+        font = "TSmediaFont;48"/>
+    <widget
+        name = "cover"
+        
+        position = "center,center"
+        size = "1920,1080"
+        transparent = "1"
+        alphatest = "blend"
+        borderWidth = "2"
+        borderColor = "#00555556"/>
+    <widget
+        position = "450,990"
+        size = "1005,90"
+        foregroundColor = "#ffffff"
+        backgroundColor = "#41000000"
+        zPosition = "2"
+        transparent = "0"
+        name = "programm"
+        halign = "center"
+        valign = "center"
+        font = "TSmediaFont;36"/>
+    <widget
+        source = "global.CurrentTime"
+        render = "Label"
+        position = "1539,1020"
+        size = "210,51"
+        zPosition = "2"
+        font = "LCD;48"
+        valign = "top"
+        halign = "right"
+        foregroundColor = "white"
+        backgroundColor = "transpBlack"
+        transparent = "0">
+        <convert type = "ClockToText">Default</convert>
+    </widget>
+    <widget
+        source = "global.CurrentTime"
+        render = "Label"
+        position = "150,1020"
+        size = "165,36"
+        font = "TSmediaFont;33"
+        halign = "left"
+        foregroundColor = "white"
+        backgroundColor = "transpBlack"
+        transparent = "0">
+        <convert type = "ClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+</screen>
+    <screen
+        name = "TSmediafexplorer"
+        position = "0,0"
+        size = "1920,1080"
+        backgroundColor = "#080000"
+        flags = "wfNoBorder"
+        title = "Playlist">
+        <widget
+            name = "feedlist"
+            position = "60,90"
+            size = "1800,660"
+            itemHeight = "60"
+            foregroundColorSelected = "#ffffff"
+            backgroundColor = "#080000"
+            foregroundColor = "yellow"
+            backgroundColorSelected = "#41000000"
+            selectionPixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/x37ltube.png"
+            enableWrapAround = "1"
+            zPosition = "1"
+            scrollbarMode = "showOnDemand"
+            transparent = "0"/>
+        <ePixmap
+            position = "center,760"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,30"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "plugin_icon"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/iptv.png"
+            position = "1800,948"
+            size = "65,65"
+            transparent = "1"
+            alphatest = "blend"
+            borderWidth = "2"
+            borderColor = "#005f5f"/>
+        <widget
+            name = "infoload"
+            position = "30,45"
+            zPosition = "4"
+            size = "1185,888"
+            font = "Regular;34"
+            foregroundColor = "yellow"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+        <widget
+            name = "handlung"
+            position = "45,870"
+            size = "1140,126"
+            backgroundColor = "#080000"
+            transparent = "1"
+            font = "TSmediaFont;30"
+            valign = "top"
+            halign = "center"
+            zPosition = "1"/>
+        <widget
+            name = "info"
+            position = "1230,900"
+            zPosition = "4"
+            size = "660,540"
+            font = "Regular;33"
+            foregroundColor = "yellow"
+            transparent = "1"
+            halign = "center"
+            valign = "top"/>
+        <eLabel
+            position = "45,1009"
+            zPosition = "4"
+            size = "255,36"
+            halign = "left"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = " "/>
+        <ePixmap
+            position = "250,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "556,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "862,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1168,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "262,1006"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "568,1006"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "874,1006"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1180,1006"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1500,1006"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/infofhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1590,1006"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "Key_red"
+            position = "240,1009"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Delete"/>
+        <widget
+            name = "Key_green"
+            position = "511,1009"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_yellow"
+            position = "905,1009"
+            zPosition = "4"
+            size = "217,36"
+            halign = "left"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_blue"
+            position = "1148,1009"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <!--<widget backgroundColor="#41000000" foregroundColor="#ffffff" position="1239,82" size="570,45"  name="pr_time" font="TSmediaFont;33" />  -->
+        <!--<widget backgroundColor="#41000000" foregroundColor="#ffffff" position="1239,138" size="570,828" name="program" font="TSmediaFont;33" /> -->
+    </screen>
+<screen
+    name = "TSmediaServerGroups"
+    position = "center,116"
+    size = "1380,900"
+    title = "Addons Groups"
+    flags="wfNoBorder">
+    <ePixmap
+        position = "center,center"
+        size = "1380,900"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/AddonsFHd.png"
+        zPosition = "-1"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "list"
+        render = "Listbox"
+        position = "30,95"
+        size = "690,624"
+        scrollbarMode = "showOnDemand"
+        transparent = "1"
+        zPosition = "1">
+        <convert type = "TemplatedMultiContent">
+            {"template": [
+            
+            MultiContentEntryText(pos = (35, 0), size = (600, 58), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+            
+            ],
+            "fonts": [gFont("TSmediaFont", 38)],
+            "itemHeight": 58
+            }
+        </convert>
+    </widget>
+    <widget
+        name = "logo"
+        position = "920,270"
+        size = "200,200"
+        zPosition = "+2"
+        alphatest = "blend"/>
+    <widget
+        name = "info"
+        position = "30,0"
+        zPosition = "1"
+        size = "1320,825"
+        font = "Regular;33"
+        backgroundColor = "background"
+        foregroundColor = "#84b8a"
+        transparent = "1"
+        halign = "center"
+        valign = "center"/>
+    <eLabel
+        position = "30,90"
+        size = "1320,3"
+        text = ""
+        font = "Regular;36"
+        zPosition = "-1"
+        backgroundColor = "#84b8a"/>
+    <widget
+        name = "fspace"
+        position = "30,700"
+        zPosition = "4"
+        size = "1320,120"
+        font = "Regular;36"
+        foregroundColor = "#84b8a"
+        transparent = "1"
+        halign = "center"
+        valign = "center"/>
+    <eLabel
+        position = "30,788"
+        size = "1320,3"
+        text = ""
+        font = "Regular;36"
+        zPosition = "-1"
+        backgroundColor = "#84b8a"/>
+    <!-- <ePixmap
+        name = "red"
+        position = "105,818"
+        zPosition = "1"
+        size = "210,60"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/red.png"
+        transparent = "1"
+        alphatest = "blend"/>
+    <ePixmap
+        name = "green"
+        position = "420,818"
+        zPosition = "1"
+        size = "210,60"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/green.png"
+        transparent = "1"
+        alphatest = "blend"/>
+    <ePixmap
+        name = "yellow"
+        position = "735,825"
+        zPosition = "1"
+        size = "210,60"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/yellow.png"
+        transparent = "1"
+        alphatest = "blend"/>
+    <ePixmap
+        name = "blue"
+        position = "1050,818"
+        zPosition = "1"
+        size = "210,60"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/blue.png"
+        transparent = "1"
+        alphatest = "blend"/> -->
+    <eLabel
+        name = "key_red"
+        text = "Close"
+        position = "85,835"
+        size = "210,60"
+        valign = "center"
+        halign = "center"
+        zPosition = "2"
+        backgroundColor = "background"
+        foregroundColor = "#ffffff"
+        font = "Regular;32"
+        transparent = "1"
+        shadowColor = "#25062748"
+        shadowOffset = "-2,-2"/>
+    <widget
+        name = "key_yellow"
+        position = "735,825"
+        size = "210,75"
+        valign = "center"
+        halign = "center"
+        zPosition = "2"
+        backgroundColor = "background"
+        foregroundColor = "#ffffff"
+        font = "Regular;30"
+        transparent = "1"
+        shadowColor = "#25062748"
+        shadowOffset = "-2,-2"/>
+</screen>
+    <screen
+        name = "TSmediaSetup2dreamos"
+        position = "center,center"
+        size = "1080,840"
+        backgroundColor = "#080000"
+        title = "TSmedia Settings">
+        <ePixmap
+            position = "118,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "424,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "724,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "95,775"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "415,775"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <eLabel
+            position = "742,784"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = " "/>
+        <ePixmap
+            position = "112,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "418,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "726,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <widget
+            name = "config"
+            position = "30,75"
+            size = "1050,595"
+            scrollbarMode = "showOnDemand"
+            itemHeight = "60"
+            transparent = "1"
+            zPosition = "2"/>
+    </screen>
+    <screen
+        name = "TSmediaSetup1"
+        position = "center,center"
+        size = "1185,855"
+        backgroundColor = "#080000"
+        title = "Youtube setup">
+        <ePixmap
+            position = "118,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "424,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "724,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "89,799"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "410,799"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <ePixmap
+            position = "112,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "418,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "726,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <widget
+            name = "config"
+            position = "52,75"
+            size = "1050,480"
+            scrollbarMode = "showOnDemand"
+            itemHeight = "50"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            zPosition = "2"/>
+    </screen>
+    <screen
+        name = "TSmediaSetup1dreamos"
+        position = "center,center"
+        size = "1185,855"
+        backgroundColor = "#080000"
+        title = "Youtube setup">
+        <ePixmap
+            position = "118,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "424,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "724,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "89,799"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "410,799"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <ePixmap
+            position = "112,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "418,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "726,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <widget
+            name = "config"
+            position = "52,75"
+            size = "1050,480"
+            scrollbarMode = "showOnDemand"
+            itemHeight = "50"
+            transparent = "1"
+            zPosition = "2"/>
+    </screen>
+    <screen
+        name = "TSmediaSetup2dreamos"
+        position = "center,center"
+        size = "1185,855"
+        backgroundColor = "#080000"
+        title = "Youtube setup">
+        <ePixmap
+            position = "118,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "424,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "724,796"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "89,799"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "410,799"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <ePixmap
+            position = "112,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "418,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "726,786"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <widget
+            name = "config"
+            position = "52,75"
+            size = "1050,480"
+            scrollbarMode = "showOnDemand"
+            itemHeight = "50"
+            transparent = "1"
+            zPosition = "2"/>
+    </screen>
+    <screen
+        name = "TSmediaSetup2"
+        position = "center,center"
+        size = "1080,840"
+        backgroundColor = "#080000"
+        title = "TSmedia Settings">
+        <ePixmap
+            position = "118,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "424,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "724,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "95,775"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "415,775"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <eLabel
+            position = "742,784"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = " "/>
+        <ePixmap
+            position = "112,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "418,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "726,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <widget
+            name = "config"
+            position = "30,75"
+            size = "1050,595"
+            scrollbarMode = "showOnDemand"
+            itemHeight = "60"
+            font = "Regular;35"
+            transparent = "1"
+            zPosition = "2"/>
+    </screen>
+    <screen
+        name = "TSmediaSetup4"
+        position = "center,center"
+        size = "1080,840"
+        backgroundColor = "#080000"
+        title = "Style Settings">
+   <ePixmap
+        position = "15,8"
+        size = "1060,65"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/topbarfhd.png"
+        zPosition = "2"  
+        transparent = "1" 
+        alphatest = "blend"/>
+      <widget
+            name = "topinfo"
+            position = "15,10"
+            zPosition = "3"
+            size = "1050,60"
+            font = "Regular;33"
+            foregroundColor = "#3F4E53"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+     <widget
+            name = "info"
+            position = "15,780"
+            zPosition = "2"
+            size = "1050,90"
+            font = "Regular;33"
+            foregroundColor = "#ffffff"
+            transparent = "0"
+            halign = "center"
+            valign = "center"/>
+        <widget
+            name = "menu"
+            position = "30,75"
+            size = "1050,675"
+            itemHeight = "35"
+            scrollbarMode = "showOnDemand"
+            transparent = "1"
+            zPosition = "2"/>
+        <widget
+            name = "pixmap2"
+            backgroundColor = "#ffffff"
+            position = "0,0"
+            size = "1080,770"           
+            zPosition = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "10,10"
+            size = "25,25"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/topbar.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+    </screen>
+    <screen name="TSmediaupdates"
+        position="center,center"
+        size="1185,1000"
+        title="TSmedia updates"
+        flags="wfNoBorder">
+    <widget
+        source="Title"
+        render="Label"
+        position="0,105"
+        foregroundColor="#084B8A"
+        size="1185,50"
+        font="Regular; 55"
+        backgroundColor="black"
+        zPosition = "2"
+        transparent="1"
+        halign="center"
+        valign="center" />
+    <ePixmap
+        position="0,0"
+        size="1185,1000"
+        pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/TsUpdate.png"
+        zPosition="1"
+        transparent="1"
+        alphatest="blend" />
+    <ePixmap
+        position="437,200"
+        size="300,320"
+        pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/team.jpg"
+        zPosition="2"
+        transparent="1"
+        alphatest="blend" />
+    <!-- <ePixmap
+        position = "330,960"
+        size = "38,38"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+        zPosition = "3"
+        transparent = "1"
+        alphatest = "blend"/> -->
+    <widget
+        name="key_blue"
+        position="357,956"
+        zPosition="4"
+        size="300,36"
+        halign="center"
+        font="TSmediaFont;30"
+        transparent="1"
+        foregroundColor="#ffffff"
+        backgroundColor="#41000000" />
+    <!-- <ePixmap -->
+        <!-- position = "300,945" -->
+        <!-- pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png" -->
+        <!-- size = "306,56" -->
+        <!-- zPosition = "2" -->
+        <!-- backgroundColor = "#ffffff" -->
+        <!-- alphatest = "blend"/> -->
+    <!-- <ePixmap
+        position = "825,960"
+        size = "38,38"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+        zPosition = "3"
+        transparent = "1"
+        alphatest = "blend"/> -->
+    <widget
+        name="key_green"
+        position="850,956"
+        zPosition="4"
+        size="300,36"
+        halign="center"
+        font="TSmediaFont;30"
+        transparent="1"
+        foregroundColor="#ffffff"
+        backgroundColor="#41000000" />
+<!--     <ePixmap
+        position = "795,945"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+        size = "306,56"
+        zPosition = "2"
+        backgroundColor = "#ffffff"
+        alphatest = "blend"/> -->
+    <widget
+        name="info"
+        position="1,646"
+        zPosition="2"
+        size="1183,252"
+        font="Regular;30"
+        foregroundColor="#ffffff"
+        transparent="1"
+        halign="center"
+        valign="center" />
+    </screen>
+<screen
+        name = "TSmediabootlogo"
+        position = "center,center"
+        size = "750,620"
+        title = ""
+        backgroundColor = "#ffffff"
+        flags = "wfNoBorder">
+        <ePixmap
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/logo.jpg"
+            position = "0,0"
+            transparent = "1"
+            size = "750,620"/>
+    </screen>    <screen
+        name = "TSmediafavlocation"
+        position = "center,center"
+        title = "Select favorites location"
+        size = "1920,1080"
+        flags = "wfNoBorder">
+        <widget
+            source = "Title"
+            render = "Label"
+            position = "120,120"
+            size = "1125,45"
+            zPosition = "3"
+            font = "Regular;39"
+            transparent = "1"/>
+        <widget
+            source = "session.VideoPicture"
+            render = "Pig"
+            position = "120,180"
+            size = "570,322"
+            zPosition = "3"
+            backgroundColor = "#ff000000"/>
+        <widget
+            source = "text"
+            render = "Label"
+            position = "120,705"
+            size = "390,37"
+            font = "Regular;33"
+            transparent = "1"
+            zPosition = "1"
+            foregroundColor = "#ffffff"/>
+        <widget
+            source = "oktext"
+            render = "Label"
+            position = "810,750"
+            size = "990,60"
+            font = "Regular;33"
+            transparent = "1"
+            zPosition = "1"
+            halign = "left"
+            valign = "center"/>
+        <widget
+            name = "target"
+            position = "120,750"
+            size = "810,33"
+            valign = "left"
+            font = "Regular;33"
+            transparent = "1"/>
+        <widget
+            name = "filelist"
+            position = "825,180"
+            size = "915,754"
+            zPosition = "1"
+            scrollbarMode = "showOnDemand"
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <ePixmap
+            position = "433,931"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "739,931"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1033,931"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "390,920"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "700,920"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <eLabel
+            position = "1011,920"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Reset fav"/>
+        <ePixmap
+            position = "427,921"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "733,921"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1039,921"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+    </screen>
+    <screen
+        name = "TSmediasubmain3"
+        position = "center,center"
+        size = "1920,1080"
+        flags = "wfNoBorder"
+        backgroundColor = "#00060606">
+        <ePixmap
+            position = "center,30"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,900"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "streamlist"
+            position = "30,75"
+            size = "570,720"
+            backgroundColor = "#080000"
+            foregroundColor = "yellow"
+            backgroundColorSelected = "#41000000"
+            selectionPixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/sel2.png"
+            scrollbarMode = "showOnDemand"
+            transparent = "0"/>
+        <widget
+            name = "streamlist2"
+            position = "600,75"
+            size = "570,720"
+            backgroundColor = "#080000"
+            foregroundColor = "yellow"
+            backgroundColorSelected = "#41000000"
+            selectionPixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/sel2.png"
+            scrollbarMode = "showOnDemand"
+            transparent = "0"/>
+        <widget
+            name = "streamlist3"
+            position = "1200,75"
+            size = "570,720"
+            backgroundColor = "#080000"
+            foregroundColor = "yellow"
+            backgroundColorSelected = "#41000000"
+            selectionPixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/sel2.png"
+            scrollbarMode = "showOnDemand"
+            transparent = "0"/>
+        <ePixmap
+            position = "1650,960"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1034,932"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            text = "Set default"
+            position = "1010,920"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <ePixmap
+            position = "1040,921"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <widget
+            name = "info"
+            position = "30,825"
+            zPosition = "2"
+            size = "1050,75"
+            font = "Regular;36"
+            foregroundColor = "#ffffff"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+    </screen>
+    <screen
+        name = "TSmediadownload"
+        position = "center,center"
+        size = "1050,450"
+        title = "Download menu">
+        <widget
+            name = "text"
+            position = "105,12"
+            size = "1050,120"
+            font = "Regular;33"
+            transparent = "1"/>
+        <widget
+            name = "list"
+            position = "22,150"
+            itemHeight = "50"
+            font = "Regular;31"
+            size = "975,300"
+            transparent = "1"/>
+    </screen>
+    <screen
+        name = "TSmediadownloaddreamos"
+        position = "center,center"
+        size = "1050,450"
+        title = "Download menu">
+        <widget
+            name = "text"
+            position = "105,12"
+            size = "1050,120"
+            font = "Regular;33"
+            transparent = "1"/>
+        <widget
+            name = "list"
+            position = "22,150"
+            itemHeight = "50"
+            size = "975,300"
+            transparent = "1"/>
+    </screen>
+    <screen
+        name = "TSmediadownloadtasks"
+        position = "center,center"
+        size = "1500,870"
+        backgroundColor = "#00060606">
+        <widget
+            name = "title"
+            position = "90,75"
+            size = "900,75"
+            zPosition = "5"
+            valign = "center"
+            halign = "left"
+            font = "Regular;31"
+            transparent = "1"
+            foregroundColor = "white"
+            shadowColor = "#000000"
+            shadowOffset = "-1,-1"/>
+        <widget
+            source = "tasklist"
+            render = "Listbox"
+            position = "90,180"
+            size = "1400,555"
+            zPosition = "7"
+            itemHeight = "50"
+            scrollbarMode = "showOnDemand"
+            transparent = "1">
+            <convert type = "TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryText(pos = (0, 1), size = (300, 40), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+                MultiContentEntryText(pos = (310, 1), size = (250, 40), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+                MultiContentEntryProgress(pos = (570, 1), size = (300, 40), percent = -3), # index 3 should be progress
+                MultiContentEntryText(pos = (900, 1), size = (500, 40), font=1, flags = RT_HALIGN_CENTER, text = 4), # index 4 is the percentage
+                ],
+                "fonts": [gFont("TSmediaFont", 35),gFont("TSmediaFont", 30)],
+                "itemHeight": 48
+                }
+            </convert>
+        </widget>
+        <ePixmap
+            position = "118,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "424,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "724,781"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "119,774"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Stop"/>
+        <eLabel
+            position = "402,774"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Play"/>
+        <eLabel
+            position = "716,774"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Downloads"/>
+        <ePixmap
+            position = "112,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "418,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "726,771"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+    </screen>
+    <screen
+        name = "TSmediadownloadlocation"
+        position = "center,center"
+        title = " "
+        size = "1920,1080"
+        flags = "wfNoBorder">
+        <widget
+            source = "Title"
+            render = "Label"
+            position = "120,120"
+            size = "1125,45"
+            zPosition = "3"
+            font = "Regular;39"
+            transparent = "1"/>
+        <widget
+            source = "session.VideoPicture"
+            render = "Pig"
+            position = "120,180"
+            size = "570,322"
+            zPosition = "3"
+            backgroundColor = "#ff000000"/>
+        <widget
+            source = "text"
+            render = "Label"
+            position = "120,705"
+            size = "390,37"
+            font = "Regular;33"
+            transparent = "1"
+            zPosition = "1"
+            foregroundColor = "#ffffff"/>
+        <widget
+            source = "oktext"
+            render = "Label"
+            position = "810,894"
+            size = "990,37"
+            font = "Regular;33"
+            transparent = "1"
+            zPosition = "1"
+            halign = "left"
+            valign = "center"/>
+        <widget
+            name = "target"
+            position = "120,750"
+            size = "810,33"
+            valign = "left"
+            font = "Regular;33"
+            transparent = "1"/>
+        <widget
+            name = "filelist"
+            position = "825,180"
+            size = "915,754"
+            zPosition = "1"
+            scrollbarMode = "showOnDemand"
+            selectionDisabled = "1"
+            transparent = "1"/>
+        <ePixmap
+            position = "583,931"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "889,931"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "564,925"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Cancel"/>
+        <eLabel
+            position = "867,925"
+            zPosition = "4"
+            size = "300,36"
+            halign = "center"
+            font = "TSmediaFont;33"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Save"/>
+        <ePixmap
+            position = "577,921"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "883,921"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,55"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+    </screen>
+    <screen
+        name = "AddonstartScreen"
+        position = "center,center"
+        size = "1350,930"
+        backgroundColor = "#080000"
+        flags = "wfNoBorder">
+        <ePixmap
+            position = "center,0"
+            size = "300,243"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/team.jpg"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,20"
+            size = "1280,16"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,580"
+            size = "1280,16"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "bild"
+            position = "675,135"
+            size = "72,72"
+            transparent = "1"
+            zPosition = "2"/>
+        <widget
+            name = "infoload"
+            position = "0,243"
+            zPosition = "4"
+            size = "1350,400"
+            font = "Regular;34"
+            foregroundColor = "yellow"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+        <widget
+            name = "handlung"
+            position = "0,643"
+            size = "1350,126"
+            backgroundColor = "#080000"
+            transparent = "1"
+            font = "TSmediaFont;30"
+            valign = "top"
+            halign = "center"
+            zPosition = "1"/>
+        <ePixmap
+            position = "10,780"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "316,780"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "622,780"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "928,780"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "22,782"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "328,782"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "634,782"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "940,782"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1260,782"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/infofhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <eLabel
+            position = "20,784"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;30"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"
+            text = "Exit"/>
+        <widget
+            name = "Key_green"
+            position = "352,784"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_yellow"
+            position = "665,784"
+            zPosition = "4"
+            size = "218,36"
+            halign = "left"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_blue"
+            position = "938,784"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+    </screen>
+<screen
+    name = "TSmediaaddons2"
+    position = "center,center"
+    size = "1920,1080"
+    title = "TSmedia-addons"
+    flags = "wfNoBorder">
+    <widget
+        source = "Title"
+        render = "Label"
+        position = "0,1033"
+        foregroundColor = "#084B8A"
+        size = "1920,50"
+        font = "Regular; 55"
+        backgroundColor = "black"
+        zPosition = "2"
+        transparent = "1"
+        halign = "center"
+        valign = "center"/>
+    <ePixmap
+        position = "center,center"
+        size = "1920,1080"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/TsMenu2.png"
+        zPosition = "0"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        name = "fanArt"
+        position = "center,center"
+        size = "1920,1080"
+        zPosition = "1"
+        transparent = "10"
+        alphatest = "on"/>
+    <ePixmap
+        position = "center,25"
+        size = "1280,16"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+        zPosition = "10"
+        transparent = "1"
+        alphatest = "blend"/>
+    <ePixmap
+        position = "center,860"
+        size = "1280,16"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+        zPosition = "10"
+        transparent = "1"
+        alphatest = "blend"/>
+    <widget
+        name = "frame"
+        position = "0,0"
+        size = "300,200"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/pic_frame3fhd.png"
+        zPosition = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label0"
+        render = "Label"
+        position = "22,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb0"
+        position = "82,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label1"
+        render = "Label"
+        position = "308,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb1"
+        position = "368,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label2"
+        render = "Label"
+        position = "592,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb2"
+        position = "652,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label3"
+        render = "Label"
+        position = "878,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb3"
+        position = "938,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label4"
+        render = "Label"
+        position = "1162,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;27"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb4"
+        position = "1222,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label5"
+        render = "Label"
+        position = "1448,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb5"
+        position = "1508,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label6"
+        render = "Label"
+        position = "22,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb6"
+        position = "82,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label7"
+        render = "Label"
+        position = "308,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb7"
+        position = "368,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label8"
+        render = "Label"
+        position = "592,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb8"
+        position = "652,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label9"
+        render = "Label"
+        position = "878,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb9"
+        position = "938,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label10"
+        render = "Label"
+        position = "1162,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb10"
+        position = "1222,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label11"
+        render = "Label"
+        position = "1448,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb11"
+        position = "1508,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label12"
+        render = "Label"
+        position = "22,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb12"
+        position = "82,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label13"
+        render = "Label"
+        position = "308,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb13"
+        position = "368,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label14"
+        render = "Label"
+        position = "572,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb14"
+        position = "632,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label15"
+        render = "Label"
+        position = "878,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb15"
+        position = "938,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label16"
+        render = "Label"
+        position = "1116,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb16"
+        position = "1222,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label17"
+        render = "Label"
+        position = "1448,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb17"
+        position = "1508,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        name = "info"
+        position = "0,875"
+        size = "1920,87"
+        font = "TSmediaFont;35"
+        foregroundColor = "#0db0bf"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "0"
+        halign = "center"
+        valign = "center"/>
+    <!--<ePixmap
+    position="440,1006"
+    size="38,38"
+    pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+    zPosition="3"
+    transparent="1"
+    alphatest="blend" />
+    <ePixmap
+    position="746,1006"
+    size="38,38"
+    pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+    zPosition="3"
+    transparent="1"
+    alphatest="blend" />
+    <ePixmap
+    position="1066,1006"
+    size="38,38"
+    pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+    zPosition="3"
+    transparent="1"
+    alphatest="blend" /> -->
+    <widget
+        name = "Key_red"
+        position = "105,980"
+        zPosition = "4"
+        size = "210,36"
+        halign = "center"
+        font = "TSmediaFont;27"
+        transparent = "1"
+        foregroundColor = "#ffffff"
+        backgroundColor = "#41000000"/>
+    <widget
+        name = "Key_green"
+        position = "690,980"
+        zPosition = "4"
+        size = "218,36"
+        halign = "center"
+        font = "TSmediaFont;27"
+        transparent = "1"
+        foregroundColor = "#ffffff"
+        backgroundColor = "#41000000"/>
+    <widget
+        name = "Key_yellow"
+        position = "348,980"
+        zPosition = "4"
+        size = "270,36"
+        halign = "center"
+        font = "TSmediaFont;27"
+        transparent = "1"
+        foregroundColor = "#ffffff"
+        backgroundColor = "#41000000"/>
+    <widget
+        name = "Key_blue"
+        position = "970,980"
+        zPosition = "4"
+        size = "270,36"
+        halign = "center"
+        font = "TSmediaFont;27"
+        transparent = "1"
+        foregroundColor = "#ffffff"
+        backgroundColor = "#41000000"/>
+</screen>
+    <screen
+        name = "TSmediaaddons2_dreamos"
+        position = "center,center"
+        size = "1920,1080"
+        backgroundColor = "#000000"
+        transparent = "0"
+        flags = "wfNoBorder">
+
+        <widget
+            name = "fanArt"
+            position = "center,center"
+            size = "1920,1080"            
+            zPosition = "1"
+            transparent="10"
+            alphatest = "on"/>
+        
+        <ePixmap
+            position = "center,25"
+            size = "1280,16"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "10"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,860"
+            size = "1280,16"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "10"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "frame"
+            position = "45,52"
+            size = "180,180"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/pic_frame3fhd.png"
+            zPosition = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label0"
+            render = "Label"
+            position = "22,237"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb0"
+            position = "22,63"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label1"
+            render = "Label"
+            position = "308,237"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb1"
+            position = "308,63"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label2"
+            render = "Label"
+            position = "592,237"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb2"
+            position = "592,63"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label3"
+            render = "Label"
+            position = "878,237"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb3"
+            position = "878,63"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label4"
+            render = "Label"
+            position = "1162,237"
+            size = "225,36"
+            font = "Regular;27"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb4"
+            position = "1162,63"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label5"
+            render = "Label"
+            position = "1448,237"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb5"
+            position = "1448,63"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label6"
+            render = "Label"
+            position = "22,510"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb6"
+            position = "22,336"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label7"
+            render = "Label"
+            position = "308,510"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb7"
+            position = "308,336"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label8"
+            render = "Label"
+            position = "592,510"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb8"
+            position = "592,336"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label9"
+            render = "Label"
+            position = "878,510"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb9"
+            position = "878,336"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label10"
+            render = "Label"
+            position = "1162,510"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb10"
+            position = "1162,336"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label11"
+            render = "Label"
+            position = "1448,510"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb11"
+            position = "1448,336"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label12"
+            render = "Label"
+            position = "22,783"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb12"
+            position = "22,609"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label13"
+            render = "Label"
+            position = "308,783"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb13"
+            position = "308,609"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label14"
+            render = "Label"
+            position = "572,783"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb14"
+            position = "572,609"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label15"
+            render = "Label"
+            position = "878,783"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb15"
+            position = "878,609"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label16"
+            render = "Label"
+            position = "1116,783"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb16"
+            position = "1162,609"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            source = "label17"
+            render = "Label"
+            position = "1448,783"
+            size = "225,36"
+            font = "Regular;33"
+            zPosition = "2"
+            transparent = "0"
+            noWrap = "1"
+            foregroundColor = "yellow"/>
+        <widget
+            name = "thumb17"
+            position = "1448,609"
+            size = "225,153"
+            zPosition = "2"
+            transparent = "1"
+            alphatest = "on"/>
+        <widget
+            name = "info"
+            position = "0,885"
+            zPosition = "2"
+            size = "1920,45"
+            font = "Regular;34"
+            foregroundColor = "#0db0bf"
+            transparent = "1"
+            valign = "center"/>
+        <ePixmap
+            position = "122,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "428,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "734,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1040,996"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "134,1006"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "440,1006"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/green.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "746,1006"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1066,1006"
+            size = "38,38"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/blue.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "1335,996"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menu.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <widget
+            name = "Key_red"
+            position = "136,1000"
+            zPosition = "4"
+            size = "210,36"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_green"
+            position = "450,1000"
+            zPosition = "4"
+            size = "218,36"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_yellow"
+            position = "728,1000"
+            zPosition = "4"
+            size = "270,36"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_blue"
+            position = "1050,1000"
+            zPosition = "4"
+            size = "270,36"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+    </screen>
+    <screen
+        name="TSmediainfoScreen"
+        title="TSmedia Info"
+        position="center,center"
+        size="1185,870"
+        flags="wfNoBorder">
+        <widget
+            name="text"
+            backgroundColor="#80000000"
+            transparent="1"
+            position="20,95"
+            size="1140,720"
+            halign="left"
+            font="TSmediaFont;33"
+            foregroundColor = "white"
+            zPosition="3" />
+        <widget
+            source="Title"
+            render="Label"
+            position="20,10"
+            foregroundColor="#84b8a"
+            size="1140,80"
+            font="Regular; 55"
+            backgroundColor="black"
+            zPosition="2"
+            transparent="1"
+            halign="center"
+            valign="center" />
+        <ePixmap
+            position = "center,center"
+            size="1185,870"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/TSInfos.png"
+            zPosition = "-1"
+            transparent = "0"
+            alphatest = "blend"/>
+    </screen>
+    <screen
+        name = "TSmediapictureplayer"
+        position = "center,center"
+        size = "1920,1080"
+        title = "TSmedia-Desktop"
+        flags = "wfNoBorder">
+        <widget
+            source="Title"
+            render="Label"
+            position="0,1033"
+            foregroundColor="#084B8A"
+            size="1920,50"
+            font="Regular; 55"
+            backgroundColor="black"
+            zPosition = "2"
+            transparent="1"
+            halign="center"
+            valign="center" />
+        <ePixmap
+            position = "center,center"
+            size = "1920,1080"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/TsMenu1.png"
+            zPosition = "0"
+            transparent = "1"
+            alphatest = "on"/>
+        <ePixmap
+            position = "center,20"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,940"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+    <widget
+        name = "frame"
+        position = "0,0"
+        size = "300,200"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/pic_frame3fhd.png"
+        zPosition = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label0"
+        render = "Label"
+        position = "22,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb0"
+        position = "82,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label1"
+        render = "Label"
+        position = "308,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb1"
+        position = "368,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label2"
+        render = "Label"
+        position = "592,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb2"
+        position = "652,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label3"
+        render = "Label"
+        position = "878,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb3"
+        position = "938,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label4"
+        render = "Label"
+        position = "1162,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;27"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb4"
+        position = "1222,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label5"
+        render = "Label"
+        position = "1448,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb5"
+        position = "1508,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label6"
+        render = "Label"
+        position = "22,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb6"
+        position = "82,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label7"
+        render = "Label"
+        position = "308,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb7"
+        position = "368,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label8"
+        render = "Label"
+        position = "592,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb8"
+        position = "652,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label9"
+        render = "Label"
+        position = "878,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb9"
+        position = "938,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label10"
+        render = "Label"
+        position = "1162,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb10"
+        position = "1222,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label11"
+        render = "Label"
+        position = "1448,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb11"
+        position = "1508,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label12"
+        render = "Label"
+        position = "22,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb12"
+        position = "82,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label13"
+        render = "Label"
+        position = "308,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb13"
+        position = "368,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label14"
+        render = "Label"
+        position = "572,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb14"
+        position = "632,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label15"
+        render = "Label"
+        position = "878,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb15"
+        position = "938,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label16"
+        render = "Label"
+        position = "1116,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb16"
+        position = "1222,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label17"
+        render = "Label"
+        position = "1448,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb17"
+        position = "1508,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+        <!-- <ePixmap
+            position = "121,966"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "703,966"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_active.png"
+            size = "306,56"
+            zPosition = "2"
+            backgroundColor = "#ffffff"
+            alphatest = "blend"/> -->
+        <!-- <ePixmap
+            position = "133,976"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/red.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "715,976"
+            size = "37,37"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/yellow.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/> -->
+        <!-- <ePixmap
+            position = "1087,986"
+            size = "65,50"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/micons/menufhd.png"
+            zPosition = "3"
+            transparent = "1"
+            alphatest = "blend"/> -->
+        <widget
+            name = "Key_red"
+            position = "172,975"
+            zPosition = "4"
+            size = "270,36"
+            halign = "left"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_yellow"
+            position = "367,975"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget name="info"
+            position="1080,960"
+            zPosition="10"
+            size="840,60"
+            font="Regular;40"
+            foregroundColor="#0db0bf"
+            backgroundColor = "#080000"
+            transparent="0"
+            halign="center"
+            valign="center" />
+    </screen>
+    <screen
+        name = "TSmediaInternationalScreen"
+        position = "center,center"
+        size = "1920,1080"
+        title = "TSmedia-International"
+        flags = "wfNoBorder">
+        <widget
+            source="Title"
+            render="Label"
+            position="0,1033"
+            foregroundColor="#084B8A"
+            size="1920,50"
+            font="Regular; 55"
+            backgroundColor="black"
+            zPosition = "2"
+            transparent="1"
+            halign="center"
+            valign="center" />
+        <ePixmap
+            position = "center,center"
+            size = "1920,1080"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/TsMenu1.png"
+            zPosition = "0"
+            transparent = "1"
+            alphatest = "on"/>
+        <ePixmap
+            position = "center,20"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            position = "center,940"
+            size = "1280,11"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/tab_line.png"
+            zPosition = "1"
+            transparent = "1"
+            alphatest = "blend"/>
+    <widget
+        name = "frame"
+        position = "0,0"
+        size = "300,200"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/pic_frame3fhd.png"
+        zPosition = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label0"
+        render = "Label"
+        position = "22,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb0"
+        position = "82,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label1"
+        render = "Label"
+        position = "308,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb1"
+        position = "368,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label2"
+        render = "Label"
+        position = "592,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb2"
+        position = "652,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label3"
+        render = "Label"
+        position = "878,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb3"
+        position = "938,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label4"
+        render = "Label"
+        position = "1162,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;27"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb4"
+        position = "1222,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label5"
+        render = "Label"
+        position = "1448,237"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb5"
+        position = "1508,73"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label6"
+        render = "Label"
+        position = "22,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb6"
+        position = "82,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label7"
+        render = "Label"
+        position = "308,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb7"
+        position = "368,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label8"
+        render = "Label"
+        position = "592,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb8"
+        position = "652,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label9"
+        render = "Label"
+        position = "878,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb9"
+        position = "938,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label10"
+        render = "Label"
+        position = "1162,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb10"
+        position = "1222,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label11"
+        render = "Label"
+        position = "1448,510"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb11"
+        position = "1508,346"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label12"
+        render = "Label"
+        position = "22,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb12"
+        position = "82,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label13"
+        render = "Label"
+        position = "308,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb13"
+        position = "368,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label14"
+        render = "Label"
+        position = "572,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb14"
+        position = "632,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label15"
+        render = "Label"
+        position = "878,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb15"
+        position = "938,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label16"
+        render = "Label"
+        position = "1116,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb16"
+        position = "1222,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+    <widget
+        source = "label17"
+        render = "Label"
+        position = "1448,783"
+        halign = "center"
+        valign = "center"
+        size = "300,36"
+        font = "Regular;33"
+        zPosition = "10"
+        backgroundColor = "#080000"
+        transparent = "1"
+        noWrap = "1"
+        foregroundColor = "yellow"/>
+    <widget
+        name = "thumb17"
+        position = "1508,619"
+        size = "225,153"
+        zPosition = "2"
+        transparent = "1"
+        alphatest = "on"/>
+        <widget
+            name = "Key_red"
+            position = "138,975"
+            zPosition = "4"
+            size = "270,36"
+            halign = "left"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget
+            name = "Key_yellow"
+            position = "350,975"
+            zPosition = "4"
+            size = "210,36"
+            halign = "center"
+            font = "Regular;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "#41000000"/>
+        <widget 
+            name="info" 
+            position="917,973" 
+            zPosition="2" 
+            size="998,50" 
+            font="Regular;37" 
+            foregroundColor="#0db0bf" 
+            transparent="1" 
+            halign="center" 
+            valign="center" />
+    </screen>
+    <screen
+        name = "TSmediam2b_setup"
+        position = "center,240"
+        size = "1125,240"
+        title = "m3u/xml bouquet converter">
+        <widget
+            position = "22,8"
+            size = "1080,150"
+            name = "config"
+            itemHeight = "35"
+            scrollbarMode = "showOnDemand"/>
+        <ePixmap
+            position = "60,210"
+            zPosition = "1"
+            size = "248,30"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/red.png"
+            alphatest = "blend"/>
+        <widget
+            source = "key_red"
+            render = "Label"
+            position = "0,165"
+            zPosition = "2"
+            size = "248,45"
+            font = "Regular;30"
+            halign = "center"
+            valign = "center"
+            backgroundColor = "background"
+            foregroundColor = "foreground"
+            transparent = "1"/>
+        <ePixmap
+            position = "308,210"
+            zPosition = "1"
+            size = "248,30"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/TSMplayer/green.png"
+            alphatest = "blend"/>
+        <widget
+            source = "key_green"
+            render = "Label"
+            position = "248,165"
+            zPosition = "2"
+            size = "248,45"
+            font = "Regular;30"
+            halign = "center"
+            valign = "center"
+            backgroundColor = "background"
+            foregroundColor = "foreground"
+            transparent = "1"/>
+    </screen>
+    <screen
+        name = "IpkgList2"
+        position = "center,115"
+        size = "1380,900"
+        title = "Addons available for install"
+        flags="wfNoBorder">
+    <ePixmap
+        position = "center,center"
+        size = "1380,900"
+        pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/AddonsFHd1.png"
+        zPosition = "-1"
+        transparent = "1"
+        alphatest = "on"/>
+        <widget
+            source = "menu"
+            render = "Listbox"
+            position = "30,105"
+            size = "720,570"
+            scrollbarMode = "showOnDemand"
+            transparent = "1"
+            zPosition = "1">
+            <convert type = "TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryPixmapAlphaBlend(pos = (18, 18), size = (36,56), png = 1), # Status Icon,
+                MultiContentEntryText(pos = (78, 0), size = (500, 56), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+                MultiContentEntryPixmapAlphaBlend(pos = (4, 4), size = (59, 59), png = 2), # action Icon,
+                MultiContentEntryPixmapAlphaBlend(pos = (578, 4), size = (132, 32), png = 7), # action Icon, 
+                ],
+                "fonts": [gFont("Regular", 36)],
+                "itemHeight": 72
+                }
+            </convert>
+        </widget>
+        <widget
+            name = "addon_info"
+            position = "730,105"
+            zPosition = "4"
+            size = "620,624"
+            font = "Regular;30"
+            foregroundColor = "#ffffff"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+        <widget
+            name = "info"
+            position = "30,645"
+            zPosition = "4"
+            size = "1320,120"
+            font = "Regular;36"
+            foregroundColor = "#84b8a"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+        <eLabel
+            position = "30,85"
+            size = "1320,3"
+            text = ""
+            font = "Regular;36"
+            zPosition = "-1"
+            backgroundColor = "#84b8a"/>
+        <widget
+            name = "fspace"
+            position = "30,730"
+            zPosition = "4"
+            size = "1320,120"
+            font = "Regular;36"
+            foregroundColor = "#ffffff"
+            transparent = "1"
+            halign = "center"
+            valign = "center"/>
+        <eLabel
+            position = "30,764"
+            size = "1320,3"
+            text = ""
+            font = "Regular;36"
+            zPosition = "-1"
+            backgroundColor = "#84b8a"/>
+<!--         <ePixmap
+            name = "red"
+            position = "105,770"
+            zPosition = "1"
+            size = "210,60"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/red.png"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            name = "green"
+            position = "420,770"
+            zPosition = "1"
+            size = "210,60"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/green.png"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            name = "yellow"
+            position = "735,770"
+            zPosition = "1"
+            size = "210,60"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/yellow.png"
+            transparent = "1"
+            alphatest = "blend"/>
+        <ePixmap
+            name = "blue"
+            position = "1050,770"
+            zPosition = "1"
+            size = "210,60"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/lib/libinstaller/ddbuttons/blue.png"
+            transparent = "1"
+            alphatest = "blend"/> -->
+        <eLabel
+            name = "key_red"
+            text = "All addons"
+            position = "95,835"
+            size = "210,60"
+            valign = "center"
+            halign = "center"
+            zPosition = "2"
+            backgroundColor = "background"
+            foregroundColor = "#ffffff"
+            font = "Regular;31"
+            transparent = "1"
+            shadowColor = "#25062748"
+            shadowOffset = "-2,-2"/>
+        <widget
+            name = "key_green"
+            position = "440,835"
+            size = "210,60"
+            valign = "center"
+            halign = "center"
+            zPosition = "2"
+            backgroundColor = "background"
+            foregroundColor = "#ffffff"
+            font = "Regular;31"
+            transparent = "1"
+            shadowColor = "#25062748"
+            shadowOffset = "-2,-2"/>
+        <widget
+            name = "key_yellow"
+            position = "770,835"
+            size = "210,60"
+            valign = "center"
+            halign = "center"
+            zPosition = "2"
+            backgroundColor = "background"
+            foregroundColor = "#ffffff"
+            font = "Regular;30"
+            transparent = "1"
+            shadowColor = "#25062748"
+            shadowOffset = "-2,-2"/>
+        <widget
+            name = "key_blue"
+            position = "1110,835"
+            size = "225,60"
+            valign = "center"
+            halign = "center"
+            zPosition = "2"
+            backgroundColor = "background"
+            foregroundColor = "#ffffff"
+            font = "Regular;31"
+            transparent = "1"
+            shadowColor = "#25062748"
+            shadowOffset = "-2,-2"/>
+    </screen>
+    <screen
+        name = "imdbupdatesScreen"
+        position = "center,center"
+        size = "1480,920"
+        title = "Movie info"
+        backgroundColor = "transparent"
+        flags = "wfNoBorder">
+
+
+            
+        <widget
+            name = "poster"
+            position = "925,39"
+            size = "488,795"
+            transparent = "1"
+            alphatest = "blend"
+            zPosition = "3"/>
+        <widget
+            name = "flag"
+            position = "800,45"
+            size = "67,67"
+            transparent = "0"
+            alphatest = "blend"
+            zPosition = "5"/>
+
+            
+        <widget
+            name = "info"
+            position = "30,15"
+            size = "900,865"
+            font = "TSmediaFont;38"
+            foregroundColor = "white"
+            backgroundColor = "#80000000"
+            transparent = "1"
+            zPosition = "3"/>
+        <ePixmap
+            position = "center,center"
+            size = "1480,920"
+            pixmap = "/usr/lib/enigma2/python/Plugins/Extensions/TSmedia/interface/images/ImdbInfosfhd.png"
+            zPosition = "-1"
+            transparent = "1"
+            alphatest = "blend"/>
+
+        <widget
+            name = "key_green"
+            position = "190,880"
+            zPosition = "4"
+            size = "200,40"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            text="Search"
+            foregroundColor = "#ffffff"
+            backgroundColor = "black"/>
+        <widget
+            name = "key_yellow"
+            position = "410,880"
+            zPosition = "10"
+            size = "200,40"
+            halign = "left"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "black"/>
+        <widget
+            name = "key_blue"
+            position = "560,880"
+            zPosition = "4"
+            size = "200,40"
+            halign = "center"
+            font = "TSmediaFont;27"
+            transparent = "1"
+            foregroundColor = "#ffffff"
+            backgroundColor = "black"/>
+
+
+
+
+            
+    </screen>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</skin>

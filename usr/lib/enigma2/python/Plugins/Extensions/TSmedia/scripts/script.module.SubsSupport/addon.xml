@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.SubsSupport"
+       name="SubsSupport"
+       version="1.5.5"
+       provider-name="mx3L. Script prepared by mfaraj">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.subtitle.module"
+             library="" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SubsSupport</summary>
+    <description lang="en">Search and download subtitles from several feeds</description>
+    <disclaimer lang="en"></disclaimer>
+    <platform>enigma2</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>https://code.google.com/p/mediaplayer2-for-sh4/</forum>
+    <website></website>
+    <email></email>
+    <source>https://code.google.com/p/mediaplayer2-for-sh4/</source>    
+  </extension>
+</addon>
