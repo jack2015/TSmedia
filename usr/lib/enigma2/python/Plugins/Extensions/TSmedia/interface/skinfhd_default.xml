@@ -1,5 +1,22 @@
 <skin>
     <!--117 Movieplayer infobar -->
+
+<screen name = "packageInstallerScreen" position="center,center" size="900,960" title="Select Package(s)" backgroundColor = "#080000" >
+  			
+  			
+
+  	<widget name="config" foregroundColor="#00ffffff" backgroundColor="#16000000" position="10,20" size="800,720" scrollbarMode="showOnDemand"/>
+
+
+  			
+ 	<widget name="key_green" position="350,820" size="250,49" valign="center" halign="center" zPosition="4" foregroundColor="#00ffffff" backgroundColor="#35FB3B" font="Regular;32" transparent="0"/>
+  			
+
+ 	<widget name="status" foregroundColor="#00ffffff" backgroundColor="#16000000" position="15,750" size="1174,54" font="Regular;35"/>
+		
+</screen>
+
+
 <screen
     name = "torrentPlayScreen"
     position = "center,center"
@@ -1672,7 +1689,7 @@
             name = "menu"
             position = "30,75"
             size = "1050,675"
-            itemHeight = "35"
+            itemHeight = "80"
             scrollbarMode = "showOnDemand"
             transparent = "1"
             zPosition = "2"/>

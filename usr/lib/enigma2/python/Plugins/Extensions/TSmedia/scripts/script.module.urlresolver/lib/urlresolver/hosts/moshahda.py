@@ -1,9 +1,7 @@
 import requests,re,time
 Sgn=requests.session()
+from base64 import b64decode
 from jsunpack import unpack
-import warnings
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-warnings.simplefilter('ignore',InsecureRequestWarning)
 def get_packed_data(html):
     packed_data = ''
     for match in re.finditer('(eval\s*\(function.*?)</script>', html, re.DOTALL | re.I):
@@ -24,7 +22,7 @@ def get_video_url(url):
         txt = txt.replace('x','P')
         return txt
     video_urls = []
-    r = Sgn.get(url,verify=False)
+    r = Sgn.get(url)
     data = r.text
     rgxt = '''{file:"(.+?)"(.+?)}'''
     download = re.findall(rgxt,data)
@@ -37,9 +35,9 @@ def get_video_url(url):
     else:
         if '(p,a,c,k,e,d)' in data:
             data2 = get_packed_data(data)
-            download = re.findall(rgxt,data2)
-            if download:
-                for x,y in download:
+            _don = re.findall(rgxt,data2)
+            if _don:
+                for x,y in _don:
                     if 'onclick' in y:continue
                     if '.m3u8' in x:y='m3u8'
                     y = cleartxt(y)

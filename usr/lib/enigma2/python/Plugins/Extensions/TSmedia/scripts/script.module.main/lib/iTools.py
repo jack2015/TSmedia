@@ -996,7 +996,8 @@ class Item(object):
         return hostName,image,issupported        
 
     def endDir(self):
-
+            if self.excl:
+                self.list=[]
             datalist=self.list
             try:
                 printD("datalist-itools",datalist[0])
@@ -1119,6 +1120,7 @@ CHostBase implements some typical methods
     
 
 class CBaseAddonClass(Item):
+    excl=False
     def __init__(self, params={}):
         Item.__init__(self)
         self.ItemClass=Item()
@@ -1192,7 +1194,26 @@ class CBaseAddonClass(Item):
             except:
                 printE()
                 return extra        
+    def _iniAddon(self):
+        
+        
+        try:
+            import inspect
+            import os
+            frame = inspect.currentframe()
+            frame = frame.f_back.f_back
+            code = frame.f_code
+            calling_module = os.path.basename(code.co_filename)
+             
+            if calling_module!='TSmediaThreads.py' and  calling_module!='wsyspath.py':
+                self.excl=True
+                 
+                
 
+            
+            return calling_module
+        except:
+            self.excl=False
     def getSubsapiLink(self,imdb_id='',sub_lng_id=''):
            log_file="/tmp/TSmedia/subsapitools.log"
            try:
@@ -1340,7 +1361,7 @@ class CBaseAddonClass(Item):
         if params:
             try:
                 print 'heades', headers
-                res = ses.post(url, headers=headers, params=params, verify=False, timeout=5)
+                res = ses.post(url, headers=headers, params=params, verify=False, timeout=15)
                 print 'res.status_code', res.status_code
                 if res.status_code == 200:
                     printD("download ok","download ok")
@@ -1357,7 +1378,7 @@ class CBaseAddonClass(Item):
         else:
             print "url",url
             try:
-                res = ses.get(url, headers=headers, verify=False, timeout=5)
+                res = ses.get(url, headers=headers, verify=False, timeout=15)
                 
                 if res.status_code == 200:
                     return res.content
@@ -3067,7 +3088,24 @@ def printDBG( DBGtxt ):
 
                 
 ########################################
-
+def slugify(value):
+    import re
+    """
+    Normalizes string, converts to lowercase, removes non-alpha characters,
+    and converts spaces to hyphens.
+    """
+    try:
+       import unicodedata
+       value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
+    except:
+        pass
+    try:
+        value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
+        value = unicode(re.sub('[-\s]+', '-', value))
+        # ...
+    except:
+        pass
+    return value
 
 
 def getimage_basename(webfile):
@@ -3076,6 +3114,7 @@ def getimage_basename(webfile):
        
                         image_basenames = webfile.split("/")
                         image_basename=image_basenames[-2]+image_basenames[-1]
+                        image_basename=slugify(image_basename)
                         if not image_basename.endswith("jpg") and not image_basename.endswith("png") and not image_basename.endswith("jpeg"):
                             
                             image_basename=image_basename+".jpg"

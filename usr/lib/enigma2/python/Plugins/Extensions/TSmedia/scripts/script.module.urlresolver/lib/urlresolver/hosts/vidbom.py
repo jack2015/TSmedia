@@ -62,7 +62,23 @@ def find_multiple_matches(text,pattern):
 def get_eval_function(data,sPattern):
     r = re.search(sPattern, data, re.DOTALL + re.IGNORECASE)
     return r
+def setUrl(sUrl):
+    __sUrl = ''
+    if "=img." in sUrl:
+        __sUrl = sUrl.split('=img.')[0]
+    elif "embed-" in sUrl:
+        __sUrl = sUrl.split('embed-')[1]
+    #__sUrl = re.sub('=img.vidbm.com/.+?','',str(sUrl))
+    __sUrl = __sUrl.replace('https://www.vidbm.com/', '')
+    __sUrl = __sUrl.replace('embed-', '')
+    __sUrl = __sUrl.replace('emb.html?', '')
+    __sUrl = __sUrl.replace('.html?auto=1','')
+    __sUrl = __sUrl.replace('.html','')
+    return __sUrl
 def get_video_url(url):
+    _id = setUrl(url)
+    print "_id_id_id_id_id_id_id_id_id_id_id_id_id_id_id=====================",_id
+    url = "https://www.vidbm.com/embed-"+str(_id)+".html?"#https://www.vidbm.com/emb.html?va4arna0184j=img.vidbm.com/va4arna0184j
     Urlo = ''
     video_urls = []
     hdr = {'Host': 'vidbm.com',

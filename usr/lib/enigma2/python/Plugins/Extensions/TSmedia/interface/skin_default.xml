@@ -1,6 +1,19 @@
 <skin>
     <!--117 Movieplayer infobar -->
+<screen name = "packageInstallerScreen" position="center,center" size="600,600" title="Select Package(s)" backgroundColor = "#080000" >
+  			
+  			
 
+  	<widget name="config" foregroundColor="#00ffffff" backgroundColor="#16000000" position="10,20" size="800,400" scrollbarMode="showOnDemand"/>
+
+        <widget name="status" foregroundColor="#00ffffff" backgroundColor="#16000000" position="0,425" size="600,100" zPosition="4" halign = "center" font="Regular;24"/>
+	
+  			
+ 	<widget name="key_green" position="233,525" size="167,60" valign="center" halign="center" zPosition="4" foregroundColor="#00ffffff" backgroundColor="#35FB3B" font="Regular;32" transparent="0"/>
+  			
+
+	
+</screen>
 <screen
     name = "torrentPlayScreen"
     position = "center,center"

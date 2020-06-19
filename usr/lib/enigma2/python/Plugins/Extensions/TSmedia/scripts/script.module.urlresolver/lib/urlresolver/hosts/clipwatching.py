@@ -1,30 +1,50 @@
-# -*- coding: utf-8 -*-
-from core import httptools
-from core import scrapertools
-from lib import jsunpack
-from platformcode import logger, config
+# -*- coding: cp1256 -*-
+
+from iTools import CBaseAddonClass,printD,printE
+from urlresolver.hTools import scrape_sources
+import sys,warnings
+import urllib,urllib2,re,os,json,requests,hashlib,time
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+warnings.simplefilter('ignore',InsecureRequestWarning)
+##########################################
+
+
+
+Agent = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; �) Gecko/20100101 Firefox/65.0'}
+import requests
+import urllib2
 import re
-def test_video_exists(page_url):
-    logger.info("(page_url='%s')" % page_url)
-    data = httptools.downloadpage(page_url).data
-    if "File Not Found" in data or "File was deleted" in data:
-        return False, config.get_localized_string(70292) % "ClipWatching"
-    return True, ""
-def get_video_url(page_url, user="", password="", video_password=""):
-    logger.info("(page_url='%s')" % page_url)
-    data = httptools.downloadpage(page_url).data
-    #data = re.findall('''\{src: "(.+?)",.+?label: "(.+?)"\}''',data)
-    #print "************************============================",data
-    # packed = scrapertools.find_single_match(data, "text/javascript'>(.*?)\s*</script>")
-    # unpacked = jsunpack.unpack(packed)
-    video_urls = []
-    videos = scrapertools.find_multiple_matches(data, 'src: "([^"]+).*?label: "([^"]+)')
-    print "************************============================",videos
-    for video, label in videos:
-        print video
-        print label
-        w = (label + "_clipwatching_",video)
-        video_urls.append(w)
-        #video_urls.append([label + " [clipwatching]", video])
-        #video_urls.sort(key=lambda it: int(it[0].split("p ", 1)[0]))
-    return video_urls
+
+class clipwatching(CBaseAddonClass):
+        def __init__(self):
+                CBaseAddonClass.__init__(self,{'cookie':'moshahda.cookie'})
+
+                self.USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+                self.MAIN_URL = 'http://clipwatching.online'
+                self.HEADER = {}#{'User_agent':self.USER_AGENT,'Content-Type': 'text/html;', 'charset':'UTF-8','Transfer-Encoding': 'chunked', 'Content-Encoding': 'gzip', 'Referer':self.getMainUrl(), 'Origin':self.getMainUrl()}
+                self.AJAX_HEADER = dict(self.HEADER)
+                self.AJAX_HEADER.update( {'X-Requested-With': 'XMLHttpRequest', 'Accept-Encoding':'gzip, deflate', 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8', 'Accept':'application/json, text/javascript, */*; q=0.01'} )
+                self.cacheLinks  = {}
+                self.defaultParams ={}# {'header':self.HEADER, 'raw_post_data':True, 'use_cookie': True, 'load_cookie': True, 'save_cookie': True, 'cookiefile': self.COOKIE_FILE}
+              
+
+        def get_video_url(self,url):
+
+                            
+
+                 
+                html = self.getPage(url)
+
+                if html:
+                    _srcs = re.search(r'sources\s*:\s*\[(.+?)\]', html)
+                    if _srcs:
+                        srcs = scrape_sources(_srcs.group(1), patterns=['''["'](?P<url>http[^"']+)'''])
+                        print "srcs",srcs
+                        return srcs
+
+
+
+
+def get_video_url(url):
+
+  return clipwatching().get_video_url(url)
